@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <style>
+        *{
+            /* box-sizing: border-box; */
+        }
+        body{
+            background-color: #849db0bd;;
+        }
+        #calculator{
+            width:24%;
+            border: 2px solid black;
+            height: 620px;
+            margin: 45px auto;
+            border-radius:35px;
+            background-color: #566a77;
+            padding: 10px;
+            box-shadow: 2px 2px 5px 3px black;
+        }
+        #display{display:block;
+            width: 95%;
+            margin: 10px auto;
+            margin-bottom: 20px;
+            height: 17%;
+            border: 2px solid black;
+            border-radius:20px;
+            background-color: rgb(0, 5, 35);
+            color: white;
+            font-size:35px;
+            padding: 60px 15px 15px 15px;
+            box-sizing: border-box;
+            text-align: right;
+        }
+        button{
+            width:60px;
+            height: 60px;
+            border-radius:30px;
+            margin: 15px;
+            font-size:30px;
+            background-color: #849db0;
+            color: aliceblue;
+            border: 1px solid rgba(0, 0, 0, 0.623);
+            box-shadow: 2px 2px 2px black;
+        }
+        .butt{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-evenly;
+            font-weight: bold;
+        }
+        #but{
+            width: 350px;
+            height: 60px;
+            margin-top: 50px;
+            background-color: #ff8c19;
+        }
+        button:hover{
+            transition:0.3s;
+            scale:1.1;
+        }
+        button:active{
+            background-color: #384048;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <input type="text" id="display" placeholder="CALCULATOR">
+    <div class="butt">
+        <button onclick="cal=cal+'1' ;  document.querySelector('#display').value=cal; " >1</button>
+        <button onclick="cal=cal+'2' ; document.querySelector('#display').value=cal;" >2</button>
+        <button onclick="cal=cal+'3' ; document.querySelector('#display').value=cal;" >3</button>
+        <button onclick="cal=cal+'4' ; document.querySelector('#display').value=cal;" >4</button>
+        <button onclick="cal=cal+'5' ; document.querySelector('#display').value=cal;" >5</button>
+        <button onclick="cal=cal+'6' ; document.querySelector('#display').value=cal;" >6</button>
+        <button onclick="cal=cal+'7' ; document.querySelector('#display').value=cal;" >7</button>
+        <button onclick="cal=cal+'8' ; document.querySelector('#display').value=cal;" >8</button>
+        <button onclick="cal=cal+'9' ; document.querySelector('#display').value=cal;" >9</button>
+        <button onclick="cal=cal+'0' ; document.querySelector('#display').value=cal;" >0</button>
+        <button onclick="cal=cal+'+' ; document.querySelector('#display').value=cal;" >+</button>
+        <button onclick="cal=cal+'-' ; document.querySelector('#display').value=cal;" >-</button>
+        <button onclick="cal=cal+'*' ; document.querySelector('#display').value=cal;" >*</button>
+        <button onclick="cal=cal+'/' ; document.querySelector('#display').value=cal;" >/</button>
+        <button onclick="cal=cal+'.' ; document.querySelector('#display').value=cal;" >.</button>
+        <button style="background-color: #ff8c19;" onclick="cal='';  document.querySelector('#display').value=cal;" >C</button>
+        <button onclick="cal=eval(cal) ; document.querySelector('#display').value=cal;" id="but">=</button>
+    </div>
+    </div>
+    <script>
+        let cal='';
+        document.querySelector('#display').value=cal;
+    </script>
+</body>
+</html>
